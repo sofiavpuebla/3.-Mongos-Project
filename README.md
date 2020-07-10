@@ -11,16 +11,17 @@ Para realizar este cometido se utilizan bases de datos en MongoDB a las cuales s
 ## Requerimientos
 
 Dado que para el buen funcionamiento de una empresa es necesario la satisfacción de los trabajadores de la misma, el objetivo es intentar conseguir una ubicación que reúna el mayor número de preferencias de los trabajadores posible. Son los siguientes:
-    * Los directivos de la empresa son apasionados de Starbucks, tienen que poder tomarse un café en los descansos.
-    * El 30% de los empleados tienen hijos, debe haber un colegio cerca.
-    * Los directivos viajan mucho para poder conocer todos los avances de cerca, debe haber un aeropuerto cerca.
-    * Cada vez más, los empleados se están volviendo veganos, debe haber sitios donde oferten comida vegana
+- Los directivos de la empresa son apasionados de Starbucks, tienen que poder tomarse un café en los descansos.
+- El 30% de los empleados tienen hijos, debe haber un colegio cerca.
+- Los directivos viajan mucho para poder conocer todos los avances de cerca, debe haber un aeropuerto cerca.
+- Cada vez más, los empleados se están volviendo veganos, debe haber sitios donde oferten comida vegana
 
-¿Cuál es la sede perfecta?
+**¿Cuál es la sede perfecta?**
 
 ### Problemas en la ejecución del proyecto
 
 Tras haber hecho las requests a la API FourSquare y haber importado los datos a MongoDB creando los índices geoespaciales, se intentan hacer geoqueries a Mongo para obtener el número de establecimientos que se encuentren en un radio determinado de una ubicación concreta. Cuando se ejecuta el código da el siguiente error:
+
     OperationFailure: error processing query: ns=companies.airportTree: GEONEAR  field=geopoint maxdist=500 isNearSphere=0
     Sort: {}
     Proj: {}
